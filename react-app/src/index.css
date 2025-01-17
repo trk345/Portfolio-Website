@@ -1,0 +1,118 @@
+body, html {
+    overflow-x: hidden; /* Prevent horizontal scrolling or else navbar not fully extended to the r8*/
+}
+
+.navbar {
+    display: flex; /* Arrange items horizontally */
+    justify-content: space-around; /* Space items evenly */
+    align-items: center; /* Center items vertically */
+    background-color: black; /* Black background */
+    padding: 10px 0; /* Add some padding */
+}
+
+.nav-links {
+    list-style-type: none; /* Remove bullet points */
+    display: flex; /* Arrange links horizontally */
+    gap: 20px; /* Add space between links */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.nav-links li a {
+    color: white; /* White text */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Adjust font size */
+    font-weight: bold; /* Make text bold */
+}
+
+.nav-links li a:hover {
+    color: gray; /* Change text color on hover */
+    transition: color 0.3s; /* Smooth hover effect */
+}
+
+.card-container {
+    display: flex; /* Makes the container a flexbox, enabling flexible alignment and layout of its children. */
+    flex-direction: column; /* Stack the child elements (cards) vertically */
+    align-items: center; /* Center cards horizontally */
+    gap: 20px; /* Add space between cards */
+    margin: 20px; /* Space between text and cards */
+    /* border: 10px solid black; */
+}
+
+.card {
+    width: 600px; /* Fixed card width */
+    height: 400px; /* Fixed card height */
+    background-size: cover; /* Ensure the background image covers the card */
+    background-position: center; /* Center the background image */
+    display: flex; /* Makes the card a flexbox, allowing its child elements (e.g., text) to be aligned. */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    color: white; /* White text for contrast */
+    font-size: 24px; /* Adjust font size */
+    font-weight: bold; /* Bold text */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add shadow for readability */
+    background-color: rgba(244, 241, 241, 0.1); /* Light translucent background */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border */
+    border-radius: 10px; /* Rounded corners */
+    /* border: 10px solid black; */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add a shadow for the pop-out effect */
+    background-color: rgba(0, 0, 0, 0.5); /* Make the card darker */
+}
+
+.home-page, .projects{
+    text-align: center;
+    color: azure;
+    width: 100%;
+    height: auto; /* Adjust height dynamically */
+    padding: 10px; /* Add padding around the content to even out the top margin of card-container */
+    /* background-color: #f0f0f0; Light background for contrast */
+    /* border: 10px solid black; */
+    background-size: cover; /* Scale the image to cover the container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+    background-attachment: fixed; /* Keep the image fixed during scroll (optional) */
+    font-family: Arial, sans-serif;
+}
+
+.about-page {
+    padding: 0;
+    margin: 0;
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    font-family: Arial, sans-serif; /* Set a clean font */
+    color: hsl(206, 82%, 70%); /* Text color for contrast */
+}
+
+.about-content {
+    flex: 1; /* Take up remaining space */
+    padding: 50px; /* Add padding for spacing */
+}
+
+.about-content h1{
+    font-size: 80px;
+}
+
+.about-content p{
+    font-size: 18px;
+    color: black;
+}
+
+.about-image {
+    width: 50%; /* Set width for the image */
+    margin-top: 20px;
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Take up full height of viewport */
+}
+
+/*Best Practice:
+It's generally better to place the transition in the base class (.card) instead of card:hover 
+so that the transition applies both when the element is hovered and when the hover ends. This 
+creates a smoother and more visually pleasing user experience. */
