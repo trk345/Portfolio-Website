@@ -17,7 +17,6 @@ function App(){
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/about" element={<About></About>}></Route>
         <Route path="/projects" element={<Projects></Projects>}></Route>
-        <Route path="/contact" element={<Contact></Contact>}></Route>
       </Routes>
     </>
   );

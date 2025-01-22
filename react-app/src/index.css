@@ -2,8 +2,12 @@ body, html {
     overflow-x: hidden; /* Prevent horizontal scrolling or else navbar not fully extended to the r8*/
 }
 
+a {
+    text-decoration: none;
+}
 .navbar {
     display: flex; /* Arrange items horizontally */
+    flex-direction:unset;
     justify-content: space-around; /* Space items evenly */
     align-items: center; /* Center items vertically */
     background-color: black; /* Black background */
@@ -16,12 +20,13 @@ body, html {
     gap: 20px; /* Add space between links */
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
+    vertical-align: middle;
 }
 
-.nav-links li a {
+.nav-links li a{
     color: white; /* White text */
     text-decoration: none; /* Remove underline */
-    font-size: 18px; /* Adjust font size */
+    font-size: 20px; /* Adjust font size */
     font-weight: bold; /* Make text bold */
 }
 
@@ -41,7 +46,7 @@ body, html {
 
 .card {
     width: 600px; /* Fixed card width */
-    height: 400px; /* Fixed card height */
+    height: 380px; /* Fixed card height */
     background-size: cover; /* Ensure the background image covers the card */
     background-position: center; /* Center the background image */
     display: flex; /* Makes the card a flexbox, allowing its child elements (e.g., text) to be aligned. */
@@ -65,7 +70,7 @@ body, html {
     background-color: rgba(0, 0, 0, 0.5); /* Make the card darker */
 }
 
-.home-page, .projects{
+.home-page, .projects, .contact{
     text-align: center;
     color: azure;
     width: 100%;
@@ -95,7 +100,7 @@ body, html {
 }
 
 .about-content h1{
-    font-size: 80px;
+    font-size: 75px;
 }
 
 .about-content p{
@@ -111,6 +116,39 @@ body, html {
     background-repeat: no-repeat;
     min-height: 100vh; /* Take up full height of viewport */
 }
+
+.footer {
+    /* background-color: #333; Dark background */
+    color: white; /* White text */
+    text-align: center; /* Center align text */
+    /* margin-top: 20px; */
+    /* padding: 1px 0; Add some padding */
+    width: 100%; /* Full width */
+    font-size: 14px; /* Smaller text size */
+}
+
+.footer a {
+    color: #1e90ff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    margin: 0 10px; /* Add spacing between links */
+}
+
+.footer a:hover {
+    color: #042aff; /* Darker blue on hover */
+}
+
+.about-footer{
+    color: black;
+}
+
+.projects-footer a{
+    color:#042aff;
+}
+
+.projects-footer a:hover{
+    color:#dd01ffef;
+}
+
 
 /*Best Practice:
 It's generally better to place the transition in the base class (.card) instead of card:hover 

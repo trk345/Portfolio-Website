@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "./Card.jsx";
 import backgroundImage from '../assets/home-bg.jpg';
+import Contact from "./Contact.jsx"
 
 function Home() {
     const cards = [
@@ -14,11 +15,11 @@ function Home() {
             text: "Projects",
             route: "/projects",
         },
-        {
-            backgroundImage: "https://via.placeholder.com/300x200",
-            text: "Contact",
-            route: "/contact",
-        },
+        // {
+        //     backgroundImage: "https://via.placeholder.com/300x200",
+        //     text: "Contact",
+        //     route: "/contact",
+        // },
     ];
 
     return (
@@ -32,6 +33,7 @@ function Home() {
                         route={card.route}
                     />
                 ))}
+                <Contact></Contact>
             </div>
         </div>
     );
